@@ -39,7 +39,7 @@ public class Plugin : BaseUnityPlugin
             }
 
             var localizationEntry = displayType.LocalizationEntry();
-            __result += string.Format(" {0}",
+            __result += string.Format(" [{0}]",
                 new LocalizedString(localizationEntry.TableCollection, localizationEntry.TableEntry).GetLocalizedString());
 
         }
