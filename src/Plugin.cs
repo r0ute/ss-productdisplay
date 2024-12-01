@@ -11,7 +11,6 @@ public class Plugin : BaseUnityPlugin
 {
     internal static new ManualLogSource Logger;
 
-
     private void Awake()
     {
         // Plugin startup logic
@@ -40,7 +39,8 @@ public class Plugin : BaseUnityPlugin
             }
 
             var localizationEntry = displayType.LocalizationEntry();
-            __result += " " + new LocalizedString(localizationEntry.TableCollection, localizationEntry.TableEntry).GetLocalizedString();
+            __result += string.Format(" {0}",
+                new LocalizedString(localizationEntry.TableCollection, localizationEntry.TableEntry).GetLocalizedString());
 
         }
 
